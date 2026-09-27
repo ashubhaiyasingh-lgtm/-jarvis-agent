@@ -1,4 +1,4 @@
-from jarvis.master import Jarvis
+from jarvis_master import Jarvis
 
 def main():
     jarvis = Jarvis()
@@ -7,9 +7,8 @@ def main():
         task = input("\nYou: ").strip()
         if task.lower() in {"exit", "quit"}:
             break
-        result = jarvis.run(task)
         print("\nJARVIS:")
-        print(result)
+        print(jarvis.run(task))
 
 if __name__ == "__main__":
     main()

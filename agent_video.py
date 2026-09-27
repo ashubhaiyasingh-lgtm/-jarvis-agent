@@ -1,9 +1,4 @@
-from .base import BaseAgent
-
-class VideoAgent(BaseAgent):
-    name = "Video Agent"
+class VideoAgent:
+    name = "VideoAgent"
     def run(self, task):
-        return (
-            f"[Video Agent] Prepared video workflow for: {task}\n"
-            "Next integration: video generation/editing provider."
-        )
+        return f"[VideoAgent] Prepared workflow for: {task}"

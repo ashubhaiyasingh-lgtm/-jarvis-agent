@@ -1,6 +1,4 @@
-from .base import BaseAgent
-
-class WebResearchAgent(BaseAgent):
-    name = "Research Agent"
+class WebResearchAgent:
+    name = "WebResearchAgent"
     def run(self, task):
-        return f"[Research Agent] Prepared web-research workflow for: {task}"
+        return f"[WebResearchAgent] Prepared workflow for: {task}"

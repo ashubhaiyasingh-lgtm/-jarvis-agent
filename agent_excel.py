@@ -1,6 +1,4 @@
-from .base import BaseAgent
-
-class ExcelAgent(BaseAgent):
-    name = "Excel Agent"
+class ExcelAgent:
+    name = "ExcelAgent"
     def run(self, task):
-        return f"[Excel Agent] Prepared data/Excel workflow for: {task}"
+        return f"[ExcelAgent] Prepared workflow for: {task}"

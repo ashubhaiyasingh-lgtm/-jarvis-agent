@@ -1,4 +1,4 @@
 class BaseAgent:
     name = "base"
-    def run(self, task: str):
+    def run(self, task):
         raise NotImplementedError

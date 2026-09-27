@@ -1,6 +1,4 @@
-from .base import BaseAgent
-
-class DocumentAgent(BaseAgent):
-    name = "Document Agent"
+class DocumentAgent:
+    name = "DocumentAgent"
     def run(self, task):
-        return f"[Document Agent] Prepared document workflow for: {task}"
+        return f"[DocumentAgent] Prepared workflow for: {task}"

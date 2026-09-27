@@ -1,9 +1,4 @@
-from .base import BaseAgent
-
-class ApplicationFormAgent(BaseAgent):
-    name = "Application Form Agent"
+class ApplicationFormAgent:
+    name = "ApplicationFormAgent"
     def run(self, task):
-        return (
-            f"[Application Form Agent] Prepared form workflow for: {task}\n"
-            "It can prepare/fill fields and attachments. Final Submit must require explicit user confirmation."
-        )
+        return f"[ApplicationFormAgent] Prepared workflow for: {task}"
