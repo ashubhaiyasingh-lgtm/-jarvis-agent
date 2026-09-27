@@ -1,0 +1,33 @@
+name: JARVIS Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "JARVIS ko kya kaam karna hai?"
+        required: true
+        type: string
+
+jobs:
+  run-jarvis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run JARVIS
+        env:
+          JARVIS_TASK: ${{ inputs.task }}
+        run: |
+          python -c "from jarvis_master import Jarvis; import os; print(Jarvis().run(os.environ['JARVIS_TASK']))"
